@@ -1,0 +1,252 @@
+@import "_reset";
+@import "_color";
+@import "_font";
+header{
+    z-index: 99999999999;
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $bg-color;
+        color: $text-color;
+        padding: 1rem 0;
+        font-family: $headerFont;
+        .nav-left,.nav-logo,.nav-right{
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            a{
+                font-size: 20px;
+            }
+        }
+        .nav-left{
+            .nav-home,.nav-combo-menu,.nav-about{
+                a{
+                    transition: .5s;
+                    &:hover{
+                        color: $header-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .nav-logo{
+            .nav-logo-image{
+                img{
+                    width: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+        .nav-right{
+            .nav-locations,.nav-menu,.nav-socials{
+                a{
+                    transition: .5s;
+                    &:hover{
+                        color: $header-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .nav-socials{
+                a{
+                    font-size: 25px;
+                    margin: 0 .3rem;
+                }
+            }
+        }
+    }
+}
+section.slider{
+    position: relative;
+    height: 100%;
+    background: $bg-color;
+    font-family: $headerFont;
+    color: $bg-color;
+    .swiper {
+        max-width: 100%;
+        height: 85vh;
+        .swiper-slide {
+                text-align: center;
+                background: $bg-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .slide-image{
+                    width: 50%;
+                    margin: 0 5rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+            .text{
+                padding: 0 5rem;
+                h1{
+                    font-size: 100px;
+                    color: $header-color;
+                }
+                p{
+                    font-size: 20px;
+                    color:$text-color;
+                }
+            }
+        }
+        .autoplay-progress {
+            width: 48px;
+            height: 48px;
+            opacity: 0;
+        }
+      }
+}
+.little-menu{
+    background-color: $bg-color;
+    display: flex;
+    padding: 3rem;
+    .little-menu-img{
+        width: 60%;
+        img{
+            width: 100%;
+        }
+    }
+    .little-menu-text{
+        width: 40%;
+        text-align: center;
+        background-color: $text-color;
+        padding: 2rem 3rem;
+        .little-menu-text-header{
+            color: $header-color;
+            font-family: $headerFont;
+            h1{
+                font-size: 70px;
+            }
+        }
+        .little-menu-text-desc{
+            color: $bg-color;
+            font-size: 20px;
+            margin: 1rem 0;
+        }
+        .little-menu-text-button{
+            margin: 5rem 0;
+            a{
+                text-decoration: none;
+                border: 2px solid $header-color;
+                padding: 1rem 2rem;
+                font-size: 22px;
+                color: $header-color;
+                border-radius: 10px;
+                transition: .5s;
+                &:hover{
+                    background-color: $header-color;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+.burgers{
+    background-color: $bg-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 1rem 0;
+    h1{
+        color: $header-color;
+        text-align: center;
+        padding: 1rem 5rem;
+        font-size: 50px;
+        background-color: rgba(1,0,0,0.5);
+        font-family: $headerFont;
+    }
+}
+.newsletter{
+    background-color: $bg-color;
+    color: $text-color;
+    text-align: center;
+    padding: 3rem;
+    .newsletter-header{
+        position: relative;
+        h4{
+            color: $header-color;
+            font-family: $headerFont;
+            font-size: 40px;
+            margin-bottom: 1rem;
+            &::before{
+                content: "";
+                width: 37%;
+                height: 5px;
+                background-color: $header-color;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            &::after{
+                content: "";
+                width: 37%;
+                height: 5px;
+                background-color: $header-color;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .newsletter-signup{
+        .newsletter-signup-text{
+            font-size: 30px;
+            margin: 3rem 0;
+        }
+        .newsletter-signup-button{
+            a{
+                text-decoration: none;
+                border: 2px solid $header-color;
+                padding: 1rem 2rem;
+                font-size: 22px;
+                color: $header-color;
+                border-radius: 10px;
+                transition: .5s;
+                &:hover{
+                    background-color: $header-color;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+footer{
+    text-align: center;
+    .footer-logo{
+        width: 100%;
+        margin: 2rem 0;
+        img{
+            width: 30%;
+        }
+    }
+    .footer-text{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2rem 25rem;
+        .footer-text-left{
+            width: 50%;
+        }
+        .footer-text-right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a{
+                color: $bg-color;
+                text-decoration: none;
+            }
+        }
+    }
+    .footer-text-bottom{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}

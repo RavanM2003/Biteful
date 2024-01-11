@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+header {
+  z-index: 99999999999;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1C2123;
+  color: #fafafa;
+  padding: 1rem 0;
+  font-family: "Salsa", cursive;
+}
+header nav .nav-left, header nav .nav-logo, header nav .nav-right {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header nav .nav-left a, header nav .nav-logo a, header nav .nav-right a {
+  font-size: 20px;
+}
+header nav .nav-left .nav-home a, header nav .nav-left .nav-combo-menu a, header nav .nav-left .nav-about a {
+  transition: 0.5s;
+}
+header nav .nav-left .nav-home a:hover, header nav .nav-left .nav-combo-menu a:hover, header nav .nav-left .nav-about a:hover {
+  color: #FD5526;
+  cursor: pointer;
+}
+header nav .nav-logo .nav-logo-image img {
+  width: 100%;
+  cursor: pointer;
+}
+header nav .nav-right .nav-locations a, header nav .nav-right .nav-menu a, header nav .nav-right .nav-socials a {
+  transition: 0.5s;
+}
+header nav .nav-right .nav-locations a:hover, header nav .nav-right .nav-menu a:hover, header nav .nav-right .nav-socials a:hover {
+  color: #FD5526;
+  cursor: pointer;
+}
+header nav .nav-right .nav-socials a {
+  font-size: 25px;
+  margin: 0 0.3rem;
+}
+
+section.slider {
+  position: relative;
+  height: 100%;
+  background: #1C2123;
+  font-family: "Salsa", cursive;
+  color: #1C2123;
+}
+section.slider .swiper {
+  max-width: 100%;
+  height: 85vh;
+}
+section.slider .swiper .swiper-slide {
+  text-align: center;
+  background: #1C2123;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.slider .swiper .swiper-slide .slide-image {
+  width: 50%;
+  margin: 0 5rem;
+}
+section.slider .swiper .swiper-slide .slide-image img {
+  width: 100%;
+}
+section.slider .swiper .swiper-slide .text {
+  padding: 0 5rem;
+}
+section.slider .swiper .swiper-slide .text h1 {
+  font-size: 100px;
+  color: #FD5526;
+}
+section.slider .swiper .swiper-slide .text p {
+  font-size: 20px;
+  color: #fafafa;
+}
+section.slider .swiper .autoplay-progress {
+  width: 48px;
+  height: 48px;
+  opacity: 0;
+}
+
+.little-menu {
+  background-color: #1C2123;
+  display: flex;
+  padding: 3rem;
+}
+.little-menu .little-menu-img {
+  width: 60%;
+}
+.little-menu .little-menu-img img {
+  width: 100%;
+}
+.little-menu .little-menu-text {
+  width: 40%;
+  text-align: center;
+  background-color: #fafafa;
+  padding: 2rem 3rem;
+}
+.little-menu .little-menu-text .little-menu-text-header {
+  color: #FD5526;
+  font-family: "Salsa", cursive;
+}
+.little-menu .little-menu-text .little-menu-text-header h1 {
+  font-size: 70px;
+}
+.little-menu .little-menu-text .little-menu-text-desc {
+  color: #1C2123;
+  font-size: 20px;
+  margin: 1rem 0;
+}
+.little-menu .little-menu-text .little-menu-text-button {
+  margin: 5rem 0;
+}
+.little-menu .little-menu-text .little-menu-text-button a {
+  text-decoration: none;
+  border: 2px solid #FD5526;
+  padding: 1rem 2rem;
+  font-size: 22px;
+  color: #FD5526;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.little-menu .little-menu-text .little-menu-text-button a:hover {
+  background-color: #FD5526;
+  color: #fafafa;
+}
+
+.burgers {
+  background-color: #1C2123;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 1rem 0;
+}
+.burgers h1 {
+  color: #FD5526;
+  text-align: center;
+  padding: 1rem 5rem;
+  font-size: 50px;
+  background-color: rgba(1, 0, 0, 0.5);
+  font-family: "Salsa", cursive;
+}
+
+.newsletter {
+  background-color: #1C2123;
+  color: #fafafa;
+  text-align: center;
+  padding: 3rem;
+}
+.newsletter .newsletter-header {
+  position: relative;
+}
+.newsletter .newsletter-header h4 {
+  color: #FD5526;
+  font-family: "Salsa", cursive;
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+.newsletter .newsletter-header h4::before {
+  content: "";
+  width: 37%;
+  height: 5px;
+  background-color: #FD5526;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.newsletter .newsletter-header h4::after {
+  content: "";
+  width: 37%;
+  height: 5px;
+  background-color: #FD5526;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.newsletter .newsletter-signup .newsletter-signup-text {
+  font-size: 30px;
+  margin: 3rem 0;
+}
+.newsletter .newsletter-signup .newsletter-signup-button a {
+  text-decoration: none;
+  border: 2px solid #FD5526;
+  padding: 1rem 2rem;
+  font-size: 22px;
+  color: #FD5526;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.newsletter .newsletter-signup .newsletter-signup-button a:hover {
+  background-color: #FD5526;
+  color: #fafafa;
+}
+
+footer {
+  text-align: center;
+}
+footer .footer-logo {
+  width: 100%;
+  margin: 2rem 0;
+}
+footer .footer-logo img {
+  width: 30%;
+}
+footer .footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem 25rem;
+}
+footer .footer-text .footer-text-left {
+  width: 50%;
+}
+footer .footer-text .footer-text-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-text .footer-text-right a {
+  color: #1C2123;
+  text-decoration: none;
+}
+footer .footer-text-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}/*# sourceMappingURL=style.css.map */
